@@ -91,6 +91,6 @@ end of the line.
 [Strings]
 MFGFILENAME="mchpcdc"
 DRIVERFILENAME ="usbser"
-MFGNAME=„Teensy“
-DESCRIPTION=„Virtual COM Port"
+MFGNAME="Teensyduino"
+DESCRIPTION="TeensyCDC"
 SERVICE="USB RS-232 Emulation Driver"
