@@ -12,6 +12,6 @@ Installation instructions so you can program you TEENSY with the sketch:
 * Now start the ARDUINO IDE and be sure to have BOARD -> "Teensy 3.1" selected
 * Load the sketch into ARDUINO and upload it. If you get an error while the sketch gets checked, please double check that "Teensy 3.1" is you selected board type
 * You should have got a new serial port now (e.g. /dev/tty.usbmodem32731 when using OSX). If you work on Windows, you will have to point the hardware installation wizard to the INF file provided. DO NOT USE THE AUTOMATIC MODE - IT WILL NOT WORK. This is because Windows is too stupid to install virtual COM ports without additional information although the USB descriptors are given all the necessary information. On host operationg systems like OSX or LINUX you just get a new serial device without further interaction
-* Now you can use GLEDIATOR provided by Solderlabs (http://www.solderlab.de/index.php/software/glediator) to drive your LED strips.
+* Now you can use GLEDIATOR provided by Solderlabs (http://www.solderlab.de/index.php/software/glediator) to drive your LED strips. Other LED matrix software like JINXS provided by Live-LED (http://www.live-leds.de) works also if the output format is defined as GLEDIATOR. As long as the software supports the GLEDIATOR output format, it should work.
 
 Hint: use RGB format for the output data
