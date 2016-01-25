@@ -17,7 +17,7 @@
 
 #include <OctoWS2811.h>
 
-const int ledsPerStrip = 40; // adopt these value to your needs
+const int ledsPerStrip = 120; // adopt these value to your needs
 
 DMAMEM int displayMemory[ledsPerStrip*6];
 int drawingMemory[ledsPerStrip*6];
@@ -38,7 +38,7 @@ OctoWS2811 leds(ledsPerStrip, displayMemory, drawingMemory, config);
 void setup() {
   pinMode(ledPin, OUTPUT);
   leds.begin();
-  for (int i=0; i < ledsPerStrip; i++){
+  for (int i=0; i < 8*ledsPerStrip; i++){
     leds.setPixel(i, 0x0F0000); // all red
   }
   leds.show();
@@ -71,7 +71,7 @@ void loop() {
           case stateB:
             pixelColor <<= 8;
             pixelColor |= long(incomingByte) & 0xFF;
-            if (pixelIndex < ledsPerStrip) {
+            if (pixelIndex < 8*ledsPerStrip) {
               leds.setPixel(pixelIndex++, pixelColor);
             }
             state = stateR;
